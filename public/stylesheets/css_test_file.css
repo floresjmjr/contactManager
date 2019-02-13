@@ -1,0 +1,282 @@
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#deleteAlert {
+	display: none;
+	position: fixed;
+	z-index: 2;
+	background-color: whitesmoke;
+	height: 175px;
+	width: 550px;
+	top: 0%;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: right;
+}
+
+#deleteAlert button {
+	height: 35px;
+	width: 100px;
+	margin-top: 35px;
+	font-size: 16px;
+	border-radius: 5px;
+}
+
+#deleteAlert p {
+	margin-top: 40px;
+	margin-left: 20px;
+	text-align: left;
+}
+
+#deleteAlert button[name='delete'] {
+	background-color: royalblue;
+	color: #fff;
+}
+
+#deleteAlert button[name='cancel'] {
+	background-color: whitesmoke;
+	color: gray;
+}
+
+header {
+	height: 150px;
+	width: 100%;
+	background-color: #6f5499;
+}
+
+h1 {
+	color: #fff;
+	font-size: 36px;
+	font-weight: 500;
+	text-align: center;
+	padding-top: 30px;
+}
+
+h2 {
+	font-size: 21px;
+	font-weight: 300;
+	color: #cdbfe3;
+	padding-top: 10px;
+	text-align: center;
+}
+
+#addAndSearch {
+	width: 80%;
+	margin: 0 10% 20px 10%;
+	background-color: whitesmoke;
+	height: 85px;
+	border-radius: 5px;
+	border: solid 1px;
+	border-color: gray;
+}
+
+#listOfContacts {
+	width: 76%;
+	margin: 0 12% 0 12%;
+}
+
+#noContacts {
+	display: none;
+	width: 76%;
+	margin: 0 12% 0 12%;
+	background-color: whitesmoke;
+	height: 140px;
+	border-radius: 5px;
+	border: solid 1px;
+	border-color: gray;
+}
+
+#addAndSearch div {
+	display: inline-block;
+	width: 33%;
+	height: 85px;
+}
+
+
+#addAndSearch button {
+	display: block;
+	width: 135px;
+	height: 45px;
+	border-radius: 5px;
+	border: solid 1px #000;
+	font-size: 18px;
+	margin: 20px auto 0 auto;
+}
+
+#addAndSearch button[name='resetTags'] {
+	height: 30px;
+	font-size: 14px;
+}
+
+#addAndSearch input {
+	display: block;
+	width: 180px;
+	height: 30px;
+	border-radius: 5px;
+	font-size: 14px;
+	padding-left: 10px;
+	margin: 10px auto 0 auto;
+	border: solid 1px gray;
+}
+
+
+h4 {
+	margin-top: 40px;
+	text-align: center;	
+	font-size: 24px;
+}
+
+button[name='addContact'] {
+	display: block;
+	width: 135px;
+	height: 45px;
+	border-radius: 5px;
+	border: solid 1px #000;
+	font-size: 18px;
+	margin: 8px auto 0 auto;
+}
+
+
+section {
+}
+
+aside {
+	display: none;
+}
+
+h3 {
+	display: block;
+	width: 80%;
+	font-size: 28px;
+	margin: 35px 10% 20px 10%;
+	border-bottom: 1px solid lightgray;
+	padding-bottom: 10px;
+	text-align: center;
+	font-weight: 500;
+}
+
+aside ul {
+	text-align: center;
+	margin-left: -150px;
+}
+
+dd, dt {
+	display: inline-block;
+}
+
+
+aside li {
+	margin-bottom: 25px;
+}
+
+aside dt {
+	display: inline-block;
+	width: 200px;
+	text-align: right;
+	margin-right: 20px;
+}
+
+dd {
+	position: relative;
+	width: 450px;
+}
+
+aside input {
+	width: 100%;
+	height: 30px;
+	border-radius: 5px;
+	border: 1px solid lightgray;
+	padding-left: 10px;
+}
+
+aside button {
+	width: 46%;
+	height: 45px;
+	border-radius: 5px;
+	font-size: 18px;
+	color: #6f5499;
+	border-color: #6f5499;
+}
+
+aside button:first-of-type {
+	margin-right: 8%;
+}
+
+dd li{
+	display: inline-block;
+}
+
+dd ul {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+}
+
+#listOfContacts h5 {
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+#listOfContacts dt {
+	display: block;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+#listOfContacts dd {
+	margin-bottom: 5px;
+	font-size: 14px;
+
+}
+
+button[name='edit'], button[name='delete'] {
+	margin-top: 15px;
+	margin-right: 15px;
+	height: 30px;
+	width: 80px;
+	border-radius: 5px;
+	border-color: #6f5499;
+	color: #6f5499;
+}
+
+
+#listOfContacts div {
+	display: inline-block;
+	width: 200px;
+	border-bottom: 1px solid lightgray;
+	padding-bottom: 20px;
+	margin-right: 50px;
+	margin-bottom: 40px;
+}
+
+dd[name='tags'] {
+	display: inline-block;
+	width: auto;
+}
+
+dd[name='tags'], a {
+	margin-right: 5px;
+}
+
+.alertLabel {
+	color: crimson;
+}
+
+.alertInput {
+	border-color: crimson;
+	margin-bottom: 20px;
+}
+
+.alertMessage {
+	position: absolute;
+	font-size: 12px;
+	text-align: left;
+	bottom: 0%;
+}
+
+
+

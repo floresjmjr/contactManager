@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Manager using Backbone</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src='javascripts/handlebars-v3.0.0.js'></script>
+  <script src="javascripts/javascript_test_file.js"></script>
+  <link rel='stylesheet' href='stylesheets/reset.css'>
+  <link rel="stylesheet" href="stylesheets/css_test_file.css">
+</head>
+  <body>
+    <header>
+      <h1>Contact Manager</h1>
+      <h2>Using Backbone.js, Localstorage, RequireJS, Handlebar and Bootstrap</h2>
+    </header>
+    <div id='deleteAlert'>
+      <p>Do you want to delete the contact?</p>
+      <button name='cancel'>Cancel</button>
+      <button name='delete'>Ok</button>
+    </div>
+    <main>
+      <div id='default'>
+        <section id='addAndSearch'>
+          <div>
+          <button name='addContact'>Add Contact</button>
+        </div
+        ><div>
+          <input type='text' name='search' placeholder='Search'>
+        </div
+        ><div>
+          <button name='resetTags'>ResetTags</button>
+        </div>
+        </section>
+        <section id='listOfContacts'>
+        </section>
+        <div id='noContacts'>
+          <h4>There are no contacts.</h4>
+          <button name='addContact'>Add Contact</button>
+        </div>
+      </div>
+      <aside id='addContact'>
+      </aside>      
+    </main>
+
+    <script id='addContactScript' type='text'>
+        <h3>Create Contact</h3>
+        <form method='POST' action=''>
+          <ul>
+            <dl>
+              <li>
+                <dt>
+                  <label for='fullName'>Full Name:</label>
+                </dt>
+                <dd>
+                  <input type='text' class='required' name='fullName'>
+                </dd>
+              </li>
+              <li>
+                <dt>
+                  <label for='email'>Email Address:</label>
+                </dt>
+                <dd>
+                  <input type='email' class='required' name='email'>
+                </dd>
+              </li>
+              <li>
+                <dt>
+                  <label for='phone'>Telephone number:</label>
+                </dt>
+                <dd>
+                  <input type='phone' class='required' name='phone'>
+                </dd>
+              </li>
+              <li>
+                <dt>
+                  <label for='tags'>Tags:</label>
+                </dt>
+                <dd>
+                  <input type='text' name='tags'>
+                </dd>
+              </li>
+              <li>
+                <dt>
+                </dt>
+                <dd>
+                  <button type='submit' name='submit'>Submit</button
+                  ><button name='cancel'>Cancel</button>
+                </dd>
+              </li>
+            </dl>
+          </ul>
+        </form>
+
+    </script>
+
+    <script id='profileTemplate' type='text/x-handlebars'>
+      {{#each contacts}}      
+      <div>
+        <h5 name='fullName'>{{full_name}}</h5>
+        <dl>
+          <dt>Phone Number:</dt>
+          <dd name='phone'>{{phone_number}}</dd>
+          <dt>Email:</dt>
+          <dd name='email'>{{email}}</dt>
+          <dt>Tags:</dt>
+          {{#if tags}}
+          {{#each tags}}
+          <dd name='tags'><a href=''>{{.}}</a></dd>
+          {{/each}}
+          {{else}}
+          <dd name='tags'><a href=''></a></dd>
+          {{/if}}
+        </dl>
+        <button name='edit'>Edit</button>
+        <button name='delete'>Delete</button>
+      </div>
+      {{/each}}
+    </script>
+
+  </body>
+</html>
